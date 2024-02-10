@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Toast from "../Toast";
 import { useNavigate, useSearchParams } from "react-router-dom";
-
+const API_URL = process.env.REACT_APP_API_URL;
 const ResetPassword = () => {
   const [toastMsg, settoastMsg] = useState(null);
   let [searchParams, setSearchParams] = useSearchParams();
@@ -36,7 +36,7 @@ const ResetPassword = () => {
     e.preventDefault();
     let password = document.querySelector("#password").value;
 
-    let response = await fetch("https://social-user.onrender.com/user/ResetPassword", {
+    let response = await fetch(`${API_URL}/user/ResetPassword`, {
       headers: {
         "Content-Type": "application/json",
       },

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Toast from "../Toast";
 import { Link, useNavigate } from "react-router-dom";
-
+const API_URL = process.env.REACT_APP_API_URL;
 const Login = () => {
   const [toastMsg, settoastMsg] = useState(null);
   const navigate = useNavigate()
@@ -34,7 +34,7 @@ const Login = () => {
     let Username = document.querySelector("#Username").value;
     let password = document.querySelector("#password").value;
 
-    let response = await fetch("https://social-user.onrender.com/user/login", {
+    let response = await fetch(`${API_URL}/user/login`, {
       headers: {
         "Content-Type": "application/json",
       },

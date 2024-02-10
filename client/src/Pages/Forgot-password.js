@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Toast from "../Toast";
 import { Link, useNavigate } from "react-router-dom";
-
+const API_URL = process.env.REACT_APP_API_URL;
 const ForgotPassword = () => {
   const [toastMsg, settoastMsg] = useState(null);
   const navigate = useNavigate()
@@ -25,7 +25,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     let email = document.querySelector("#email").value;
 
-    let response = await fetch("https://social-user.onrender.com/user/ForgotPassword", {
+    let response = await fetch(`${API_URL}/user/ForgotPassword`, {
       headers: {
         "Content-Type": "application/json",
       },
