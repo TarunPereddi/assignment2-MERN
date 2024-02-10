@@ -56,7 +56,7 @@ const Signup = () => {
     let email = document.querySelector("#email").value;
     let password = document.querySelector("#password").value;
 
-    let response = await fetch("https://banao-mern-assignment-ayush.onrender.com/user/create", {
+    let response = await fetch("https://social-user.onrender.com/user/create", {
       headers: {
         "Content-Type": "application/json",
       },

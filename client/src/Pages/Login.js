@@ -34,7 +34,7 @@ const Login = () => {
     let Username = document.querySelector("#Username").value;
     let password = document.querySelector("#password").value;
 
-    let response = await fetch("https://banao-mern-assignment-ayush.onrender.com/user/login", {
+    let response = await fetch("https://social-user.onrender.com/user/login", {
       headers: {
         "Content-Type": "application/json",
       },

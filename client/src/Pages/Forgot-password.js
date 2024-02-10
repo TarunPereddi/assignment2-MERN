@@ -25,7 +25,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     let email = document.querySelector("#email").value;
 
-    let response = await fetch("https://banao-mern-assignment-ayush.onrender.com/user/ForgotPassword", {
+    let response = await fetch("https://social-user.onrender.com/user/ForgotPassword", {
       headers: {
         "Content-Type": "application/json",
       },

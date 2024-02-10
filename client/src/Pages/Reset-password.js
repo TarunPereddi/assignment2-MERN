@@ -36,7 +36,7 @@ const ResetPassword = () => {
     e.preventDefault();
     let password = document.querySelector("#password").value;
 
-    let response = await fetch("https://banao-mern-assignment-ayush.onrender.com/user/ResetPassword", {
+    let response = await fetch("https://social-user.onrender.com/user/ResetPassword", {
       headers: {
         "Content-Type": "application/json",
       },

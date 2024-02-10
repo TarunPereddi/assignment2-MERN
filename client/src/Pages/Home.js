@@ -16,7 +16,7 @@ const Home = () => {
   }, [token]);
 
   useEffect(() => {
-    fetch("https://banao-mern-assignment-ayush.onrender.com/post/Posts", {
+    fetch("https://social-user.onrender.com/post/Posts", {
       headers: {
         "Content-Type": "application/json",
         authtoken: token,
@@ -66,7 +66,7 @@ const Home = () => {
         else {
             method = 'DELETE'
         }
-        const response = await fetch("https://banao-mern-assignment-ayush.onrender.com/post/users/like", {
+        const response = await fetch("https://social-user.onrender.com/post/users/like", {
       method: method,
       headers: {
         "Content-Type": "application/json",
@@ -92,7 +92,7 @@ const Home = () => {
     e.preventDefault();
     let imgurl = document.querySelector("#Url").value;
     let caption = document.querySelector("#Cap").value;
-    const response = await fetch("https://banao-mern-assignment-ayush.onrender.com/post/CreatePost", {
+    const response = await fetch("https://social-user.onrender.com/post/CreatePost", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -118,7 +118,7 @@ const Home = () => {
     let PostID = document.querySelector(".UpdatePost").getAttribute("postID")
     let imgurl = document.querySelector("#UrlUpdate").value;
     let caption = document.querySelector("#CapUpdate").value;
-    const response = await fetch("https://banao-mern-assignment-ayush.onrender.com/post/UpdatePost", {
+    const response = await fetch("https://social-user.onrender.com/post/UpdatePost", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -141,7 +141,7 @@ const Home = () => {
   };
 
 const deletePost =async (PostID) => {
-    const response = await fetch("https://banao-mern-assignment-ayush.onrender.com/post/users/delete", {
+    const response = await fetch("https://social-user.onrender.com/post/users/delete", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -164,7 +164,7 @@ const deletePost =async (PostID) => {
   const handleCommentSubmit = async (e, UserID, PostID) => {
     e.preventDefault();
     let cmt = document.querySelector("#comment").value;
-    const response = await fetch("https://banao-mern-assignment-ayush.onrender.com/post/users/comment", {
+    const response = await fetch("https://social-user.onrender.com/post/users/comment", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
